@@ -2,10 +2,8 @@
 execute pathogen#infect()
 execute pathogen#helptags()
 
-" enables syntax processing
+filetype plugin on
 syntax enable
-" load filetype specific indent
-filetype indent on
 
 let mapleader=","
 
@@ -85,7 +83,13 @@ map <S-F6> :bp<cr>
 " Toogle sho/hide of special characters
 map <F4> :set list!<cr>
 
+" opens a dock link with "enter"
+nnoremap <buffer> <CR> <C-]>
+" returns to previous page with "backspace"
+nnoremap <buffer> <BS> <C-T>
+
 " Automaticall change to folder of current file
 autocmd BufEnter * silent! lcd %:p:h
 
 " Plugin specific options
+let g:notes_directories = ['~/.vim/documents/notes']

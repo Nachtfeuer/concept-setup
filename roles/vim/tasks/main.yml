@@ -9,6 +9,7 @@
   with_items:
       - ~/.vim/bundle
       - ~/.vim/autoload
+      - ~/.vim/documents/notes
 
 - name: vim - install pathogen
   get_url:
@@ -18,3 +19,4 @@
 - name: vim - clone plugins
   git: repo={{ item.repo }} dest=~/.vim/bundle/{{ item.name }} version=HEAD
   with_items: '{{ vim_plugins }}'
+

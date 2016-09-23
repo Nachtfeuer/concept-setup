@@ -1,6 +1,9 @@
 apt_packages:
     - git
+    - git-gui
+    - meld
     - exuberant-ctags
+    - xtrlock
 
 vim_plugins:
     - { repo: 'https://github.com/vim-scripts/taglist.vim.git', name: taglist }
@@ -12,6 +15,9 @@ vim_plugins:
     - { repo: 'https://github.com/tomtom/tcomment_vim.git', name: tcomment }
     - { repo: 'https://github.com/uguu-org/vim-matrix-screensaver.git', name: matrix }
     - { repo: 'git://github.com/altercation/vim-colors-solarized.git', name: colors-solarized }
+    - { repo: 'https://github.com/xolox/vim-misc.git', name: misc }
+    - { repo: 'https://github.com/xolox/vim-notes.git', name: notes }
+    - { repo: 'https://github.com/vimwiki/vimwiki.git', name: vimwiki }
 
 # git configuration
 git_user_name: Thomas Lehmann
