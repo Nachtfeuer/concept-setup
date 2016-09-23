@@ -46,7 +46,6 @@ install packages into the system.
 
 - bash aliases with new role bash.
 - make setup work for yum based environments.
-- add role for installing Docker.
 - provides script to start Docker container with this setup.
 - ...
 
@@ -56,4 +55,8 @@ install packages into the system.
   example a change to your .vimrc should finally be done in
   the .vimrc.j2 of your version of this project otherwise you
   would ovewrite your changes each time.
+- The colors are targeted for using the solarized scheme.
+  Please ensure to adjust your terminal for that as well.
+  I'm using the "Solarized Light". When you use the tool
+  'Terminator' as terminal then adjusting this is very easy.
 

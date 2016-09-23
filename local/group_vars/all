@@ -11,6 +11,7 @@ vim_plugins:
     - { repo: 'https://github.com/airblade/vim-gitgutter.git', name: gitgutter }
     - { repo: 'https://github.com/tomtom/tcomment_vim.git', name: tcomment }
     - { repo: 'https://github.com/uguu-org/vim-matrix-screensaver.git', name: matrix }
+    - { repo: 'git://github.com/altercation/vim-colors-solarized.git', name: colors-solarized }
 
 # git configuration
 git_user_name: Thomas Lehmann
