@@ -1,10 +1,13 @@
 " plugin manager for vim
 execute pathogen#infect()
+execute pathogen#helptags()
 
 " enables syntax processing
 syntax enable
 " load filetype specific indent
 filetype indent on
+
+let mapleader=","
 
 " Color scheme (terminal)
 set t_Co=256
@@ -38,6 +41,8 @@ set listchars=tab:▸\ ,eol:¬
 set cursorline
 " content starts scrolling earlier 
 set scrolloff=10
+" enable statusline
+set laststatus=2
 
 " useful for match brackets
 set showmatch
@@ -56,6 +61,7 @@ set ignorecase
 set backspace=indent,eol,start
 
 " Copy indent from current line when starting a new line
+set cindent
 set autoindent
 
 " Enable use of the mouse for all modes
@@ -67,3 +73,18 @@ set pastetoggle=<F11>
 " Rendering
 set ttyfast
 
+" Some mappings
+
+" Show (git) blame
+map <Leader>bl :VCSBlame<cr>
+" Navigate to next buffer
+map <F6> :bn<cr>
+" Navigate to previous buffer
+map <S-F6> :bp<cr>
+" Toogle sho/hide of special characters
+map <F4> :set list!<cr>
+
+" Automaticall change to folder of current file
+autocmd BufEnter * silent! lcd %:p:h
+
+" Plugin specific options

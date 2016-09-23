@@ -7,6 +7,9 @@ vim_plugins:
     - { repo: 'https://github.com/vim-scripts/taglist.vim.git', name: taglist }
     - { repo: 'https://github.com/vim-scripts/vcscommand.vim.git', name: vcscommand }
     - { repo: 'https://github.com/kien/ctrlp.vim.git', name: ctrlp }
+    - { repo: 'https://github.com/scrooloose/syntastic.git', name: syntastic }
+    - { repo: 'https://github.com/itchyny/lightline.vim.git', name: lightline }
+    - { repo: 'https://github.com/airblade/vim-gitgutter.git', name: gitgutter }
 
 # git configuration
 git_user_name: Thomas Lehmann

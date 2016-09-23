@@ -1,8 +1,31 @@
 ---
 # tasks file for git
 
-- git_config: name=user.name scope=global value="{{ git_user_name }}"
-- git_config: name=user.email scope=global value="{{ git_user_email }}"
-- git_config: name=core.editor scope=global value={{ git_editor }}
-- git_config: name=color.ui scope=global value=auto
-- git_config: name=push.default scope=global value=current
+- name: configure user name
+  git_config: name=user.name scope=global value="{{ git_user_name }}"
+
+- name: configure user email
+  git_config: name=user.email scope=global value="{{ git_user_email }}"
+
+- name: configure vim as editor
+  git_config: name=core.editor scope=global value={{ git_editor }}
+
+- name: configure auto coloring
+  git_config: name=color.ui scope=global value=auto
+
+- name: configure default push for current branch
+  git_config: name=push.default scope=global value=current
+
+- name: provide nice git bash prompt
+  git: repo='https://github.com/magicmonty/bash-git-prompt.git'
+       dest=~/.bash-git-prompt
+
+- name: ensure .bash_completion does exist
+  file: path=~/.bash_completion state=touch
+
+- name: enable bash prompt
+  lineinfile: dest=~/.bash_completion line={{ item }}
+  with_items:
+    - "source ~/.bash-git-prompt/gitprompt.sh"
+    - "GIT_PROMPT_ONLY_IN_REPO=1"
+
