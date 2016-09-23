@@ -82,8 +82,13 @@ map <F6> :bn<cr>
 map <S-F6> :bp<cr>
 " Toogle sho/hide of special characters
 map <F4> :set list!<cr>
+" Show/hide taglist
+map <F9> :TlistToggle<cr>
 
-" opens a dock link with "enter"
+" visual indentation with tab and shift tab
+vmap <TAB>     >gV
+vmap <S-TAB>   <gV
+
 nnoremap <buffer> <CR> <C-]>
 " returns to previous page with "backspace"
 nnoremap <buffer> <BS> <C-T>
@@ -93,3 +98,8 @@ autocmd BufEnter * silent! lcd %:p:h
 
 " Plugin specific options
 let g:notes_directories = ['~/.vim/documents/notes']
+
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 1
+let g:indent_guides_guide_size = 1
+

@@ -1,0 +1,6 @@
+---
+# tasks file for bsh
+
+- name: bsh - deploy .bash_aliases to $HOME
+  template: src=.bash_aliases.j2 dest=~/.bash_aliases
+
