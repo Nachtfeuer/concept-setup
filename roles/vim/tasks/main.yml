@@ -1,0 +1,20 @@
+---
+# tasks file for vim
+
+- name: deploy .vimrc to $HOME
+  template: src=.vimrc.j2 dest=~/.vimrc
+
+- name: vim - ensure folders
+  file: path={{ item }} state=directory
+  with_items:
+      - ~/.vim/bundle
+      - ~/.vim/autoload
+
+- name: vim - install pathogen
+  get_url:
+      url: https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+      dest: ~/.vim/autoload/pathogen.vim
+
+- name: vim - clone plugins
+  git: repo={{ item.repo }} dest=~/.vim/bundle/{{ item.name }}
+  with_items: vim_plugins

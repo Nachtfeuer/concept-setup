@@ -1,0 +1,15 @@
+
+apt_packages:
+    - git
+    - exuberant-ctags
+
+vim_plugins:
+    - { repo: 'https://github.com/vim-scripts/taglist.vim.git', name: taglist }
+    - { repo: 'https://github.com/vim-scripts/vcscommand.vim.git', name: vcscommand }
+    - { repo: 'https://github.com/kien/ctrlp.vim.git', name: ctrlp }
+
+# git configuration
+git_user_name: Thomas Lehmann
+git_user_email: thomas.lehmann.private@gmail.com
+git_editor: vim
+

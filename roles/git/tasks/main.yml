@@ -1,0 +1,8 @@
+---
+# tasks file for git
+
+- git_config: name=user.name scope=global value="{{ git_user_name }}"
+- git_config: name=user.email scope=global value="{{ git_user_email }}"
+- git_config: name=core.editor scope=global value={{ git_editor }}
+- git_config: name=color.ui scope=global value=auto
+- git_config: name=push.default scope=global value=current

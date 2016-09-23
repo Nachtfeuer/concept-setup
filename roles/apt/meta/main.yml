@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: Thomas Lehmann
+  description: installing packages on a system which provides apt-get
+  company: private
+  license: MIT
+  min_ansible_version: 2.0
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  categories:
+  - development
+  

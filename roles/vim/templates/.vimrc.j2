@@ -1,0 +1,69 @@
+" plugin manager for vim
+execute pathogen#infect()
+
+" enables syntax processing
+syntax enable
+" load filetype specific indent
+filetype indent on
+
+" Color scheme (terminal)
+set t_Co=256
+set background=dark
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+
+" updates the terminal title with Vim details of current file
+set title
+
+" show line numbers
+set number
+" do not wrap long lines
+set nowrap
+" Maximum width of text that is being inserted.  A longer line will be
+" broken after white space to get this width.  A zero value disables
+set textwidth=100
+
+" converts tabs into spaces
+set expandtab
+" number of spaces for a tab (when file reading)
+set tabstop=4
+" number of spaces for a tab (when file editing)
+set softtabstop=4
+set shiftwidth=4
+
+" Visualize tabs and newlines
+set listchars=tab:▸\ ,eol:¬
+
+" highlight current line
+set cursorline
+" content starts scrolling earlier 
+set scrolloff=10
+
+" useful for match brackets
+set showmatch
+" displaying current command and mode
+set showcmd
+set showmode
+
+" highlight text after search has been done
+set hlsearch
+" search the characters that a typed for searching
+set incsearch
+" case insensitviesearch
+set ignorecase
+
+" Allow backspacing over autoindent, line breaks and start of insert action
+set backspace=indent,eol,start
+
+" Copy indent from current line when starting a new line
+set autoindent
+
+" Enable use of the mouse for all modes
+set mouse=a
+
+" Use <F11> to toggle between 'paste' and 'nopaste'
+set pastetoggle=<F11>
+
+" Rendering
+set ttyfast
+

@@ -1,0 +1,8 @@
+---
+# tasks file for apt
+
+- name: installing required packages
+  apt: name={{ item }} state=present
+  with_items: '{{ apt_packages }}'
+  become: true
+
