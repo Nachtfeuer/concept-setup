@@ -1,0 +1,9 @@
+---
+# tasks file for kdb
+
+- name: installing wiki pages
+  copy: src={{ item }} dest={{ vim_wiki_path }}
+  with_items:
+    - "{{ role_path }}/files/InterestingLinks.wiki"
+    - "{{ role_path }}/files/AnsibleHowTo.wiki"
+

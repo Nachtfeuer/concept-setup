@@ -5,6 +5,7 @@ apt_packages:
     - vim
     - exuberant-ctags
     - xtrlock
+    - jq
 
 vim_plugins:
     - { repo: 'https://github.com/vim-scripts/taglist.vim.git', name: taglist }
@@ -22,6 +23,8 @@ vim_plugins:
     - { repo: 'https://github.com/mhinz/vim-startify.git', name: startify }
     - { repo: 'https://github.com/junegunn/goyo.vim.git', name: goyo }
     - { repo: 'https://github.com/nathanaelkane/vim-indent-guides.git', name: indent-guides }
+
+vim_wiki_path: ~/vimwiki/
 
 # git configuration
 git_user_name: Thomas Lehmann

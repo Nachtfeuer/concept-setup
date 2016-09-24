@@ -1,0 +1,15 @@
+# Welcome to the interesting links wiki page
+
+= Relating Ansible =
+
+ * Ansible Documentation -- http://docs.ansible.com/ansible/index.html
+
+= Relating Bash =
+
+ * Bash Testing Framework -- https://github.com/sstephenson/bats
+ * Bash Debugger -- http://bashdb.sourceforge.net/bashdb.html#Top
+ 
+= Relating Git =
+
+ * Git Cheat Sheet 1 -- https://www.git-tower.com/blog/git-cheat-sheet/
+

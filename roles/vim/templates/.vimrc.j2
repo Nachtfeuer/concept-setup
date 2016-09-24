@@ -103,3 +103,8 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 1
 let g:indent_guides_guide_size = 1
 
+let wiki = {}
+let wiki.path = '{{ vim_wiki_path }}'
+let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
+let g:vimwiki_list = [wiki]
+
