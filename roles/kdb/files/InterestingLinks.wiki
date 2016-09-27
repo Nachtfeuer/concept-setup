@@ -1,8 +1,10 @@
-# Welcome to the interesting links wiki page
+# Interesting links
 
 = Relating Ansible =
 
  * Ansible Documentation -- http://docs.ansible.com/ansible/index.html
+ * Unified package manager --
+   http://serverfault.com/questions/587727/how-to-unify-package-installation-tasks-in-ansiblehttp://serverfault.com/questions/587727/how-to-unify-package-installation-tasks-in-ansible
 
 = Relating Bash =
 
@@ -13,3 +15,12 @@
 
  * Git Cheat Sheet 1 -- https://www.git-tower.com/blog/git-cheat-sheet/
 
+= Development = 
+
+ * Design patterns (1) -- http://www.oodesign.com/
+ * Design patterns (2) -- http://www.vincehuston.org/dp/
+
+= Special =
+
+ * Google command line search -- https://github.com/jarun/googler
+ 
