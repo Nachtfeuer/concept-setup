@@ -1,6 +1,6 @@
 - hosts: local
   roles:
-      - apt
+      - { role: apt, when: ansible_os_family == "Debian" }
       - git
       - vim
       - bsh

@@ -20,6 +20,10 @@
  * Design patterns (1) -- http://www.oodesign.com/
  * Design patterns (2) -- http://www.vincehuston.org/dp/
 
+= Docker =
+
+ * Docker without sudo -- http://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo
+
 = Special =
 
  * Google command line search -- https://github.com/jarun/googler
