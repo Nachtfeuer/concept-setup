@@ -4,6 +4,10 @@
 - name: installing wiki pages
   copy: src={{ item }} dest={{ vim_wiki_path }}
   with_items:
-    - "{{ role_path }}/files/InterestingLinks.wiki"
-    - "{{ role_path }}/files/AnsibleHowTo.wiki"
+    - "{{ role_path }}/files/index.wiki"
+    - "{{ role_path }}/files/ConceptSetupLinks.wiki"
+    - "{{ role_path }}/files/ConceptSetupAnsible.wiki"
+    - "{{ role_path }}/files/ConceptSetupTools.wiki"
+    - "{{ role_path }}/files/ConceptSetupBash.wiki"
+    - "{{ role_path }}/files/ConceptSetupDocker.wiki"
 

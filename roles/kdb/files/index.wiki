@@ -1,0 +1,23 @@
+# Welcome to concept-setup environment
+
+The idea of that environment is to create and
+to adjust it via *Ansible*. Of course you could
+modify this wiki pages but finally you should
+update the Git repository. *The backup is Git*.
+
+The following aspects are handled
+by the concept-setup playbook:
+
+ * Installation of commandline tools like Git, ag, Vim, ctags, ...
+ * User specific configuration for Git, Vim, ...
+ * Providing a knowledge database (this wiki, vim notes, ...)
+ * Providing some useful scripts.
+
+Here now the links to the sub pages:
+
+ * [[ConceptSetupAnsible]] -- Ansible details relating concept-setup.
+ * [[ConceptSetupBash]] -- Bash details relating concept-setup.
+ * [[ConceptSetupDocker]] -- Docker scripts using the concept-setup.
+ * [[ConceptSetupTools]] -- Useful tools.
+ * [[ConceptSetupLinks]] -- Some interesting links.
+

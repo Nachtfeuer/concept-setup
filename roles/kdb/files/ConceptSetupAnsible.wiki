@@ -1,0 +1,61 @@
+# Welcome to concept-setup and Ansible
+
+= Introduction =
+
+As already mentioned on the main page all is
+organized via Ansible. That tools is a great
+for provisioning of machines and also a good
+documentation for environment and processes.
+
+The main file play.yml is the startup. It's
+pretty simple just defining in order the roles
+required to create or adjust your current
+environment.
+
+= The apt role =
+
+The apt role is just a simple role for installing
+packages when you have a Debian derived system.
+The list of packages to be installed are defined
+in the inventory (local/group_vars/all). There's
+a variable apt_packages. Unfortunately you have
+to organize a variable for each package system
+since the names of the packages differ often.
+
+= The git role =
+
+The git role is mainly to organize the .gitconfig
+since you should have user name and your email
+configured and some useful options like coloring,
+your favorite editor and possibly some aliases.
+Please refer to the Git documentation if you need
+more.
+
+Also a custom bash prompt is installed that does
+show you details like branch names and the status
+while you are in the repository path. There are
+other implementations (if you like); I have choosen
+one I found myself useful.
+
+= The vim role =
+
+Of course you might prefer Emacs or Nano. Feel free
+to create an own role for it. The vim roles installs
+a .vimrc and a lot of plugins. if you are interested
+in the details please read the documentation of the
+individual plugins which are often very good. Just
+have a look for the url's which are also listed in
+the group vars (all file). I'm using the plugin manager
+pathogen.
+
+= FAQ =
+
+== Getting facts of local host? ==
+This can be called at any location in your machine!
+The output is the data in JSON format written to stdout.
+
+{{{
+ansible -m setup localhost
+}}}
+
+

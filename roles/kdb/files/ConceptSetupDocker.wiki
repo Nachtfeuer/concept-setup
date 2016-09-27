@@ -1,0 +1,25 @@
+# Welcome to the concept-setup Docker page
+
+= Introduction =
+
+Docker is a mechanism to run a process isolated in
+a defined environment and can be used also to deploy
+a container to another machine. I'm using that for
+a ci/cd pipeline for following setups:
+
+ - building war file (Java 8, Maven 3)
+ - building UI static files (nodejs, bower, ...)
+ - building C++ application and RPM for it (gcc >= 4.9.x, CMake >= 3.3)
+
+Also the build slave might be a different OS you
+can organize to build on CentOS 7.x (as example) which
+is preferable the same (nearly) environment as in production.
+
+= Quick start =
+
+ * Running a CentOS 7 bash environment:
+   {{docker run --name=dev -it centos:7.2.1511 bash}}
+ * Running a CentOS 7 bash environment
+   mounting current path as /docker inside the container:
+   {{docker run --name=dev -v $PWD:/docker -it centos:7.2.1511 bash}}
+
