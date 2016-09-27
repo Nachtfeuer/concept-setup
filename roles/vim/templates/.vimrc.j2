@@ -77,13 +77,15 @@ set ttyfast
 " Show (git) blame
 map <Leader>bl :VCSBlame<cr>
 " Navigate to next buffer
-map <F6> :bn<cr>
+map <F6>   :bn<cr>
 " Navigate to previous buffer
 map <S-F6> :bp<cr>
-" Toogle sho/hide of special characters
-map <F4> :set list!<cr>
+map <F7>   :cnext<cr>
+map <S-F7> :cprev<cr>
+" Toogle show/hide of special characters
+map <F4>   :set list!<cr>
 " Show/hide taglist
-map <F9> :TlistToggle<cr>
+map <F9>   :TlistToggle<cr>
 
 " visual indentation with tab and shift tab
 vmap <TAB>     >gV
@@ -103,8 +105,17 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 1
 let g:indent_guides_guide_size = 1
 
+" options for vimwiki plugin
 let wiki = {}
 let wiki.path = '{{ vim_wiki_path }}'
 let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
 let g:vimwiki_list = [wiki]
+" options for ctrlp plugin
+let g:ctrlp_show_hidden = 1
+" options for ack plugin
+let g:ackprg = 'ag --nogroup --nocolor --column'
+" options for incsearch plugin
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 
