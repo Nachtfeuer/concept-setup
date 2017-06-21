@@ -7,6 +7,7 @@ apt_packages:
     - xtrlock
     - jq
     - silversearcher-ag
+    - taskwarrior
 
 vim_plugins:
     - { repo: 'https://github.com/vim-scripts/taglist.vim.git', name: taglist }
