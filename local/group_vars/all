@@ -8,6 +8,7 @@ apt_packages:
     - jq
     - silversearcher-ag
     - taskwarrior
+    - gnuplot
 
 vim_plugins:
     - { repo: 'https://github.com/vim-scripts/taglist.vim.git', name: taglist }
