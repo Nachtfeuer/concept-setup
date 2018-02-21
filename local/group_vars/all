@@ -1,4 +1,5 @@
 apt_packages:
+    - python-pip
     - git
     - git-gui
     - meld
@@ -9,6 +10,19 @@ apt_packages:
     - silversearcher-ag
     - taskwarrior
     - gnuplot
+    - tig
+    - pandoc
+    - lynx
+
+pip_packages:
+    - tox
+    - pylint
+    - radon
+    - pep8
+    - pep257
+    - flake8
+    - httpie
+    - sqlalchemy
 
 vim_plugins:
     - { repo: 'https://github.com/vim-scripts/taglist.vim.git', name: taglist }

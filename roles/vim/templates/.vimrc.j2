@@ -97,6 +97,8 @@ nnoremap <buffer> <BS> <C-T>
 
 " Automaticall change to folder of current file
 autocmd BufEnter * silent! lcd %:p:h
+" Restored last position
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Plugin specific options
 let g:notes_directories = ['~/.vim/documents/notes']
