@@ -13,6 +13,8 @@ apt_packages:
     - tig
     - pandoc
     - lynx
+    - htop
+    - code
 
 pip_packages:
     - tox
@@ -23,6 +25,7 @@ pip_packages:
     - flake8
     - httpie
     - sqlalchemy
+    - schema
 
 vim_plugins:
     - { repo: 'https://github.com/vim-scripts/taglist.vim.git', name: taglist }

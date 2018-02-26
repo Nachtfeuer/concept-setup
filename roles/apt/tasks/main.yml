@@ -1,8 +1,28 @@
 ---
 # tasks file for apt
+- name: vscode - ensure /etc/apt/sources.list.d/vscode.list exists
+  file:
+     path: /etc/apt/sources.list.d/vscode.list
+     mode: 0644
+     state: touch
+  become: true
+  tags:
+    - apt
+
+- name: vscode - provide installation source
+  lineinfile:
+     path: /etc/apt/sources.list.d/vscode.list
+     line: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+  become: true
+  tags:
+    - apt
 
 - name: installing required packages
   apt: name={{ item }} state=present
+     update_cache: yes
   with_items: '{{ apt_packages }}'
   become: true
+  tags:
+    - apt
 
+  

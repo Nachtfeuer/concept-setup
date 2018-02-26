@@ -1,0 +1,8 @@
+= Welcome to the apt knowledge =
+
+== Upgrading one package only ==
+
+{{{
+apt-get install --only-upgrade <packagename>
+}}}
+
