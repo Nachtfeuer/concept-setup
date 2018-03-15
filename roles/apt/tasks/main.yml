@@ -18,7 +18,9 @@
     - apt
 
 - name: installing required packages
-  apt: name={{ item }} state=present
+  apt:
+     name: "{{ item }}"
+     state: present
      update_cache: yes
   with_items: '{{ apt_packages }}'
   become: true

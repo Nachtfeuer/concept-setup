@@ -1,0 +1,23 @@
+---
+- name: Packer - Download of package
+  get_url:
+    url: https://releases.hashicorp.com/packer/1.2.1/packer_1.2.1_linux_amd64.zip
+    dest: /tmp
+    validate_certs: False
+  tags:
+    - download
+
+- name: Packer - Install to /usr/local/bin
+  unarchive:
+    src: /tmp/packer_1.2.1_linux_amd64.zip
+    dest: /usr/local/bin
+  tags:
+    - download
+
+- name: Packer - Remove of package
+  file:
+    path: /tmp/packer_1.2.1_linux_amd64.zip
+    state: absent
+  tags:
+    - download
+
